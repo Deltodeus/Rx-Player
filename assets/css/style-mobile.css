@@ -1,0 +1,79 @@
+@media screen and (max-width: 800px) {
+    .nav-bar, .name{
+        flex-direction: column;
+    }
+
+    .name{
+        justify-content: center;
+        align-content: center;
+    }
+
+    .logo{
+        display: flex;
+        align-items: center;
+    }
+
+    .logo>img{
+        width: 5em;
+    }
+
+    .rx-player>p{
+        font-size: 2em;
+    }
+
+    .mySlides>img, .navigation, .name{
+        width: 100%;
+    }
+
+    .company-profile{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .company-logo, .company-desc, .newsletter{
+        width: 100%;
+    }
+
+    .company-logo>img{
+        width: 15em;
+    }
+
+    .company-desc{
+        text-align: center;
+        width: 80%;
+        align-self: center;
+        margin-bottom: 2em;
+    }
+
+    .subscribe, .company-desc{
+        background-color: rgba(196, 196, 196,0.7);
+        padding: 0.5em;
+        border: 1px solid #c4c4c4;
+        border-radius: 1em;
+    }
+
+    .socmed{
+        width: 20%;
+        align-items: center;
+    }
+
+    .socmed-logos{
+        align-self: center;
+        width: 100%;
+    }
+
+    /*PREMIUM*/
+    .card-container{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .card{
+        width: 90%;
+        margin: 1em;
+    }
+
+    /*TOP ASIA*/
+    
+}    

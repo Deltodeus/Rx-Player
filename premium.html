@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RX Player</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style-premium.css">
+    <link rel="stylesheet" href="assets/css/style-mobile.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/register.css">
+</head>
+
+<!--HEADER-->
+<header>
+    <div class="nav-bar">
+        <div class="name">
+            <div class="logo">
+                <img src="assets/images/Logo_Transparan.png" alt="RX Player">
+            </div>
+
+            <div class="rx-player">
+                <p>RX Player</p>
+            </div>
+        </div>
+        
+        <div class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Premium</a></li>
+                <li class="dropdown"><a href="index.html" class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Browse</a>
+                    <div class="dropdown-content">
+                        <a href="index.html">TOP 10 Musik Asia</a>
+                        <a href="index.html">Musik Berdasar Genre</a>    
+                    </div>
+                </a></li>
+                <li onclick="document.getElementById('id02').style.display='block'" style="cursor: pointer;">Daftar</li>
+                <li>|</li>
+                <li onclick="document.getElementById('id01').style.display='block'" style="cursor: pointer;">Masuk</li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!--END OF HEADER-->
+
+<!--BODY-->
+<body>
+    <div class="body-container card-container">
+        <div class="card">
+            <h3>Dapatkan Premium</h3>
+            <p>Nikmati musik bebas iklan dan download untuk mendengarkan secara offline kapanpun dan dimanapun.</p>
+            <p>Coba sekarang untuk mendapatkan pengalaman terbaikmu dalam mendengarkan</p>
+            <p>Mulai dari Rp 45.000/bulan, rasakan pengalaman mendengarkan lagu yang baru dan menyenangkan</p>
+            <p>Klik daftar untuk memulai.</p>
+        </div>
+
+        <div class="card">
+            <h3>Promo Pelajar</h3>
+            <p>Kami peduli dengan setiap orang yang ingin mendengarkan musik, begitupun kepada kalian para pelajar yang selalu semangat.</p>
+            <p>Daftarkan kartu pelajar anda dan dapatkan potongan 50% menjadi hanya Rp 22.500/bulan untuk pengalaman mendengarkan lagu yang terbaik.</p>
+            <p>Ayo, tunggu apa lagi! Klik daftar untuk memulai.</p>
+        </div>
+
+        <div class="card">
+            <h3>Family Time</h3>
+            <p>Ayo sayangi keluarga dengan memberikan pengalaman mendengarkan musik terbaik.</p>
+            <p>Dapatkan 5 akun premium untuk seluruh anggota keluarga anda hanya dengan Rp 80.000/bulan dan mulai dengarkan musik bebas iklan dimana saja dan kapan saja.</p>
+            <p>Klik daftar untuk memulai.</p>
+
+        </div>
+    </div>
+
+        <!-- MODAL LOGIN-->
+        <div id="id01" class="modal">
+            <form name="loginform" class="modal-content animate" action="#" method="POST" onsubmit="return(validasiLogin());">
+              <div class="imgcontainer">
+                <!-- close modal ketika diclick -->
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="assets/images/img_avatar2.png" alt="Avatar" class="avatar">
+              </div>
+          
+          <!-- untuk inputan -->
+              <div class="container">
+                <label for="mail"><b>Email</b></label>
+                <input class="modal-input" type="text" placeholder="Enter Email" name="email">
+          
+                <label for="psw"><b>Password</b></label>
+                <input class="modal-input" type="password" placeholder="Enter Password" name="psw">
+                  
+                <button type="submit" class="modal-btn">Login</button>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+              </div>
+          
+              <!-- tombol cancel bakal keluar dari modal kalau diclick -->
+              <div class="container-bot">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn modal-btn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+              </div>
+            </form>
+          </div>
+    
+        <!-- MODAL REGISTER -->
+        <div id="id02" class="modal">
+            <form name="registerform" class="modal-content animate">
+              <!-- Close modal kalau diclick -->
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+              </div>
+              <!-- inputan register -->
+              <form action="">
+              <div class="container">
+                <label for="fname"><b>Fullname</b></label>
+                <input class="modal-input" id="nameID" type="text" placeholder="Your Fullname" name="fname">
+          
+                <label for="email"><b>Email</b></label>
+                <input class="modal-input" id="emailID" type="text" placeholder="Your Email" name="email">
+          
+                <label for="numb"><b>Phone Number</b></label>
+                <input class="modal-input" id="numbID" type="text" placeholder="Your Phone Number" name="numb">
+          
+                <label for="dob"><b>Date of Birth</b></label>
+                <input class="modal-input" id="dobID" type="date" placeholder="Date of birth" name="dob">
+                  
+              <div id="fullgender">
+                <label for="gender"><b>Gender</b></label>
+                <input id="radio-male" type="radio" name="gmale" value="male"> Male
+                <input id="radio-female" type="radio" name="gfemale" value="female"> Female <br>
+              </div>
+          
+                <label for="psw"><b>Password</b></label>
+                <input class="modal-input"  id="passID" type="password" placeholder="Enter Password" name="psw">
+                <label for="cpsw"><b>Confirm Password</b></label>
+                <input class="modal-input"  id="cpassID" type="password" placeholder="Enter Password" name="cpsw">
+                <label for="payment">Pembayaran:</label>
+                <select name="cars" id="cars">
+                    <option value="creditcard">Kartu Kredit</option>
+                    <option value="pulsa">Pulsa</option>
+                    <option value="debit">Kartu Debit</option>
+                </select>
+                <button class="modal-btn" type="submit" name="submit" value="submit" onclick="validasiRegistrasi()">Register</button>
+                <label>
+                  <input id="agreeID" type="checkbox" checked="checked" name="agreecheck">I agree to the <a href="#">Terms and Conditions</a> 
+                </label>
+                
+              </div>
+            </form>
+            <!-- tombol cancel bakal nutup modal klau di click -->
+              <div class="container-bot">
+                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn modal-btn">Cancel</button>
+              </div>
+            </form>
+          </div>
+    
+          <script src="assets/js/validasi.js"></script>
+          <script src="assets/js/script.js"></script>
+</body>
+<!--END OF BODY-->
+
+<!--FOOTER-->
+<footer>
+    <div class="footer">
+        <div class="company-name">
+            <img src="assets/images/Logo_Transparan.png" alt="RX Player">
+            <p>RX Player</p>
+        </div>
+
+        <div class="socmed">
+            <p>Follow us:</p>
+            <div class="socmed-logos">
+                <a href="https://www.instagram.com"><img src="assets/images/instagram.png" alt="instagram"></a>
+                <a href="https://www.twitter.com"><img src="assets/images/twitter.png" alt="twitter"></a>
+                <a href="https://www.facebook.com"><img src="assets/images/facebook.png" alt="facebook"></a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy 2020 RX Player</p>
+        </div>
+    </div>
+</footer>
+<!--END OF FOOTER -->
+</html>
